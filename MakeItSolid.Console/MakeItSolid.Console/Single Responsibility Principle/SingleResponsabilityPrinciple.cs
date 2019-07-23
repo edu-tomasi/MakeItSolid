@@ -2,6 +2,12 @@
 using System.Collections.Generic;
 using System.IO;
 
+/*
+    Single responsibility principle is that a typical class is responsible for one thing and has one reason to change. 
+    The single responsibility principle its a just piece of very good advice on how to build systems. 
+    And it specifies that any particular class should have just a single reason to change.
+*/
+
 namespace MakeItSolid.Console
 {
     public class Journal
@@ -26,7 +32,7 @@ namespace MakeItSolid.Console
         }
 
         #region Métodos que violam a SRP
-        ///Esses métodos violam a SRP pois adicionam mais responsábilidades à classe Journal.
+        ///Esses métodos violam a SRP pois adicionam mais responsabilidades à classe Journal.
         ///Agora a classe Journal tem a responsabilidade de manter as entries e gerenciar as funcionalidades de persistência.
         ///
         //public void Save(string fileName)
