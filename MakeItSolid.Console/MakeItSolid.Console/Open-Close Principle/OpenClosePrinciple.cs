@@ -111,8 +111,8 @@ namespace MakeItSolid
                 throw new ArgumentNullException(paramName: nameof(second));
             }
 
-            this.first = first?? throw new ArgumentNullException(paramName: nameof(first));
-            this.second = second ?? throw new ArgumentNullException(paramName: nameof(second));
+            this.first = first;
+            this.second = second;
         }
 
         public bool IsSatisfied(T t)
@@ -127,10 +127,10 @@ namespace MakeItSolid
         {
             foreach (var i in items)
             {
-                yield return i;
-            }
-            {
-
+                if (spec.IsSatisfied(i))
+                {
+                    yield return i;
+                }
             }
         }
     }
